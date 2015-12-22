@@ -1,10 +1,3 @@
-my_num =  25   # Add your code here!
-
-my_boolean = true     # And here!
-
-my_string = "Ruby"    # Also here.
-
-
 
 
 def prime(num)
@@ -22,11 +15,10 @@ end
 if (num % prime[0] == 0 || num % prime[1] == 0)
     test.push(1)
 	return test.length == 0
-	
+
 end
 
 
-#while (sqrt(num) >= prime[(prime.length-1)])
 
 loop do
 
@@ -37,17 +29,17 @@ collect1 = []
 count = 0
 
 	while (collect1.length == 0 &&  count <= (prime.length-1))
-		
+
 		if six1 % prime[count] == 0
 			collect1.push(prime[count])
 		end
-		
+
 		count+=1
 	end
 
 if collect1.length == 0
 	prime.push(six1)
-	
+
 	if num % prime[(prime.length-1)] == 0
 		test.push(prime[(prime.length-1)])
 	end
@@ -61,13 +53,13 @@ six1 += 6
 
 collect2 = []
 count = 0
-		
+
 	while (collect2.length == 0 &&  count <= (prime.length-1))
-		
+
 		if six2 % prime[count] == 0
 			collect2.push(prime[count])
 		end
-		
+
 		count+=1
 	end
 
@@ -75,13 +67,13 @@ count = 0
 
 if collect2.length == 0
 	prime.push(six1)
-	
+
 	if num % prime[(prime.length-1)] == 0
 		test.push(prime[(prime.length-1)])
 	end
 end
 
-break if test.length != 0	
+break if test.length != 0
 six2 += 6
 
 end
@@ -98,56 +90,56 @@ end
 
 
 def add(prime=[2,3])
-    
+
 output=[]
 six1 = 5
 six2 = 7
 
 loop do
-   
+
     count1=0
     try = []
-    
+
     while (!prime[count1].nil? && try.length == 0 && six1 > prime[(prime.length-1)])
-    
+
         if six1 % prime[count1] == 0
             try.push(1)
         end
 
         count1+=1
-        
+
     end
-    
+
     if try.length ==0 && six1 > prime[(prime.length-1)]
         output.push(six1)
     end
-    
+
     #break if six1 <= prime[(prime.length-1)]
     break if output.length != 0
-    
+
     count2=0
     try = []
-    
+
     while (!prime[count2].nil? && try.length == 0 && six2 > prime[(prime.length-1)])
-    
+
         if six2 % prime[count2] == 0
             try.push(1)
         end
 
         count2+=1
-        
+
     end
-    
+
     if try.length ==0 && six2 > prime[(prime.length-1)]
         output.push(six2)
     end
-    
+
   #  break if six2 <= prime[(prime.length-1)]
     break if output.length != 0
-    
+
     six1+=6
     six2+=6
-    
+
 end
 
 return output[0]
@@ -159,12 +151,12 @@ def reduce(num, prime, index, final)
 
 loop do
 go = true
-    if num % prime[index] == 0 && num / prime[index] != 1 
-        
+    if num % prime[index] == 0 && num / prime[index] != 1
+
         num = num / prime[index]
-        
+
         if prime2(num)
-            
+
             final.push(num)
         end
     elsif num % prime[index] == 0 && num / prime[index] == 1
@@ -244,10 +236,10 @@ def reduce_prime(num, prime, index, final)
 
 loop do
 go = true
-    if num % prime[index] == 0 && num / prime[index] != 1 
-        
+    if num % prime[index] == 0 && num / prime[index] != 1
+
         final.push(num)
-        
+
     else
         go = false
     end
